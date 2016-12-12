@@ -1,0 +1,18 @@
+$ftss: Arial, Helvetica, sans-serif;
+$fts: Georgia, Times, "Times New Roman", serif;
+$primary-color: #B71A01;
+$txt-color: $primary-color;
+
+#shpEncartRayonEvent {
+  width: 962px;
+  margin: 20px auto 0;
+  .chapeau-ray {
+    width: 960px;
+    border: 1px solid $primary-color;
+    // border-radius: 12px;
+  }
+}
+// commentaires non silencieux > /*! */
+/*! surcharge styleV4.css */
+,#contentBG #container {padding-top: 0;}
+,#container #tetiere {height: auto; margin-top: 10px; line-height: normal; border-bottom: none; text-indent: 0; color: $txt-color; }
