@@ -5,18 +5,19 @@
 }
 $fontSerif: Georgia, "Times New Roman", Times, serif;
 $font-stack-arial: Arial, Helvetica, sans-serif;
-$btn-bg : #003300;//#ffff00
+$btn-bg : #C68D00;//#ffff00
 $btn-hover : #D40000;//#ffff00
 $btn-txtColor: #FFF;
 
 // surcharge
-#hpAnimCo{height: 505px;}
+// #hpAnimCo{height: 505px;}
 
-.flocons {position: absolute; top: 0; left: 0; width: 964px; height: 465px; background: url('flocons.png') 0 0;}
+.logo {position: absolute; left: 65px; top: 55px;}
+.flocons {position: absolute; top: 0; left: 0; width: 964px; height: 464px; background: url('flocons.png') 0 0; opacity: 0.7;}
 .flocons {animation: snow 20s linear infinite;}
 @keyframes snow {
-  0% {background-position: 0px 0px,0px 0px,0px 0px;}
-  100% {background-position: 500px 1000px, 400px 400px, 300px 300px; }
+  0% {background-position: 0px 0px;}
+  100% {background-position: 964px 464px; }
 }
 
 body, ul {margin: 0;}
@@ -100,16 +101,17 @@ li {
   position: relative;
   box-sizing: content-box;
   display: inline-block;
-  height: 46px;
-  padding: 0 16px; margin: 230px 0 0 695px ;
+  height: 42px;
+  padding: 0 16px; margin: 185px 0 0 486px;
   text-align: center;
   border: 3px solid #FFFFFF; color: $btn-txtColor;
-  font: bold normal 16px/46px $font-stack-arial; text-decoration: none;
-  text-shadow: 0 0 6px rgba(0,0,0,0.45);
+  font: normal 16px/42px $font-stack-arial; text-decoration: none;
+  text-shadow: 0 0 6px rgba(0,0,0,0.70);
 
   span {
-    display: inline-block;
-   vertical-align: middle;
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: bold;
     + span {
       position: relative; top: 0px;
       // border: 1px solid green;

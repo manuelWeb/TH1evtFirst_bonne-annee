@@ -9,29 +9,31 @@ html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
     / link type="text/css" rel="stylesheet" href="index.scss"
     script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"
   body
-    == $styleIE
+    /== $styleIE
+    script src="modernizr-custom.js" type="text/javascript"
     #evtFirst_Link.centralEvent
       #globalLink
         .bottomfade
 
       .flocons
-        /img src="flocons.png"
-      /.fireworks
-      /  img src="fireworks_simple.png"
+
+      img.logo src="logoTL_2016_.svg" alt=""
       
       a.js-btn.gradient-btn-evtfirst href==($linkRay) onclick==($ga_ray_btn)
         span.reflet &nbsp;
         span
           == ($txtBtn[0])
-          span.move
-            == ($txtBtn[1])
-      .price
-        .v-h-center
-          == $price[:fr]
-          br
-          b
-            span == $price[:ent]
-            == $price[:dec] + $price[:unit]
+          /span.move
+          /  == ($txtBtn[1])
+
+      / .price
+      /   .v-h-center
+      /     == $price[:fr]
+      /     br
+      /     b
+      /       span == $price[:ent]
+      /       == $price[:dec] + $price[:unit]
+            
       /pk X3
       /ul
       /  li
@@ -44,5 +46,5 @@ html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       /    a.pck3 href==($pck3[:fr]) onclick==($ggall[3])
       /     img src="pk3.png" alt=""
 
+    script type="text/javascript" src="modernizr-detect.js"
     script type="text/javascript" src="track.js"
-    / script type="text/javascript" src="firstEvt_reveal.js"

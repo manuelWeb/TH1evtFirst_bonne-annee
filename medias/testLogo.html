@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>logo TL svg 2016</title>
+  <script src="modernizr-custom.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <img src="logoTL_2016.svg" alt="">
+  <script type="text/javascript">
+  // Check if browser can handle SVG
+  if (!Modernizr.svg) {
+    // Get all img tag of the document and create variables
+    var i = document.getElementsByTagName("img"), j, y;
+ // For each img tag
+    for (j = i.length; j--;) {
+      y = i[j].src
+        // If filenames ends with SVG
+      if (y.match(/svg$/)) {
+        // Replace "svg" by "png"
+        i[j].src = y.slice(0, -3) + 'png'
+      }
+    }
+  }
+  </script>
+</body>
+
+</html>
