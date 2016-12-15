@@ -1,0 +1,13 @@
+/ tobechange // !important save indexC.sliml to validate change
+-$url = "http://www.ideascomfort.be/bevl/"
+
+-$txtBtn  = ["Ontdek snel de selectie","&#9654;"]
+-$linkRay = "#{$url}boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id="+$ID[:bv]
+
+-gastart  = "ga('local.send', 'event', 'EncartHP', "
+-gaend    = " document.location.pathname);"
+
+-$ga_ray_BG  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-BG_id-"+$ID[:bv]+"', document.location.pathname);";
+-$ga_ray_btn  = "ga('local.send', 'event', 'EncartHP', '"+$TH+"-btn_id-"+$ID[:bv]+"', document.location.pathname);";
+
+-$styleIE = '<!--[if lte IE 9]> <style type="text/css"> .pck3{top: 10px;} .title-pck3, .sub1-pck3, .sub2-pck3{left: 690px;} </style> <![endif]-->'

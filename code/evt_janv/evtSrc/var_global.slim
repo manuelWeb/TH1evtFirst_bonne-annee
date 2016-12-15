@@ -1,0 +1,71 @@
+/ change date - THEME
+-$date     = "0117"
+-$TH       = "TH01_bonneAnnee"
+/ change ID rayon all country
+- $ID = { # ...,
+  fr: "1370",
+  bf: "1369",
+  bv: "1373",
+  nl: "1368",
+  de: "1372",
+  uk: "1371"}
+/ change > pdtfrbf > FR + BF; pdtbvnl > BV + NL; pdtde > DE; pdtuk > UK
+-pdtfrbf = ["0", "maison-deco/no-l/serviettes-poinsettia-prepliees-rouges/0951319.html", "maison-deco/no-l/guirlande-perles-led/0904318.html", "cuisine/couverts-couteaux/mini-fourchettes-aperitif/9667312.html"]
+-pdtbf = ["0", "maison-deco/no-l/serviettes-poinsettia-prepliees-rouges/0951319.html", "maison-deco/no-l/guirlande-perles-led/0904318.html", "cuisine/couverts-couteaux/mini-fourchettes-aperitif/9667312.html"]
+-pdtbv = ["0", "huis-decoratie/kerstversiering/voorgevouwen-servetten-met-rode-kerststerren/0951319.html", "huis-decoratie/kerstversiering/led-parelslinger/0904318.html", "keuken/bestek-messen/aperitiefvorkjes/9667312.html"]
+-pdtnl = ["0", "huis-decoratie/kerstversiering/voorgevouwen-servetten-met-rode-kerststerren/0951319.html", "huis-decoratie/kerstversiering/led-parelslinger/0904318.html", "keuken/bestek-messen/aperitiefvorkjes/9667312.html"]
+-pdtde = ["0", "heim-dekoration/weihnachtsdeko/vorgefaltete-weihnachtsstern-servietten-rot/0951319.html", "heim-dekoration/weihnachtsdeko/perlen-lichterkette-led/0904318.html", "kuche/besteck-messer/mini-aperitifgabeln/9667312.html"]
+-pdtuk = ["0", "home-decoration/christmas/red-pre-folded-poinsettia-serviettes/0951319.html", "home-decoration/christmas/led-christmas-lights-with-beads/0904318.html", "kitchen/cutlery-knives/mini-aperitif-forks/9667312.html"]
+
+/ change google PK x3 track
+-ggpk = { #...,
+  pck1: "'pk1_serviettes-poinsettia_0951319', ", pck2: "'pk2_Guirlande-LED_0904318', ", pck3: "'pk3_Mini fourchettes_9667312', ",
+  pck1_bf: "'pk1_serviettes-poinsettia_0951319', ", pck2_bf:   "'pk2_Guirlande-LED_0904318', ", pck3_bf: "'pk3_Mini fourchettes_9667312', ",
+  pck1_de: "'pk1_serviettes-poinsettia_0951319', ", pck2_de:   "'pk2_Guirlande-LED_0904318', ", pck3_de: "'pk3_Mini fourchettes_9667312', ",
+  pck1_nl: "'pk1_serviettes-poinsettia_0951319', ", pck2_nl:  "'pk2_Guirlande-LED_0904318', ", pck3_nl: "'pk3_Mini fourchettes_9667312', ",
+  pck1_bv: "'pk1_serviettes-poinsettia_0951319', ", pck2_bv:   "'pk2_Guirlande-LED_0904318', ", pck3_bv: "'pk3_Mini fourchettes_9667312', ",
+  pck1_uk: "'pk1_serviettes-poinsettia_0951319', ", pck2_uk:   "'pk2_Guirlande-LED_0904318', ", pck3_uk: "'pk3_Mini fourchettes_9667312', ",
+  }
+
+/ prix
+- $price = {# ,
+  fr: "Sélection<br /> à partir de", ent: "4", dec: ".95", unit: "€", unituk: "£",
+  de: "Ab", nl: "Selectie<br /> vanaf", uk: "Selection<br /> from",
+}
+// do not change > base URL
+-$urlfr = "http://www.tempsl.fr/fr/"
+-$urlIC = ["http://www.ideascomfort.","be/befr/","be/bevl/","de/de/","nl/nl/","co.uk/uk/"]
+// do not change google track
+-ggstart = "ga('local.send', 'event', 'EncartHP', "
+-ggend = "document.location.pathname);"
+-$ggall = [0, ggstart+ggpk[:pck1]+ggend, ggstart+ggpk[:pck2]+ggend, ggstart+ggpk[:pck3]+ggend]
+-$ggall_bf = [0, ggstart+ggpk[:pck1_bf]+ggend, ggstart+ggpk[:pck2_bf]+ggend, ggstart+ggpk[:pck3_bf]+ggend]
+-$ggall_de = [0, ggstart+ggpk[:pck1_de]+ggend, ggstart+ggpk[:pck2_de]+ggend, ggstart+ggpk[:pck3_de]+ggend]
+-$ggall_nl = [0, ggstart+ggpk[:pck1_nl]+ggend, ggstart+ggpk[:pck2_nl]+ggend, ggstart+ggpk[:pck3_nl]+ggend]
+-$ggall_bv = [0, ggstart+ggpk[:pck1_bv]+ggend, ggstart+ggpk[:pck2_bv]+ggend, ggstart+ggpk[:pck3_bv]+ggend]
+-$ggall_uk = [0, ggstart+ggpk[:pck1_uk]+ggend, ggstart+ggpk[:pck2_uk]+ggend, ggstart+ggpk[:pck3_uk]+ggend]
+// do not change
+- $pck1 = { #...,
+  fr: "#{$urlfr}#{pdtfrbf[1]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtfrbf[1]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[1]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[1]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[1]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[1]}",
+  }
+- $pck2 = { #...,
+  fr: "#{$urlfr}#{pdtfrbf[2]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtfrbf[2]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[2]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[2]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[2]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[2]}",
+  }
+- $pck3 = { #...,
+  fr: "#{$urlfr}#{pdtfrbf[3]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtfrbf[3]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[3]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[3]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[3]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[3]}",
+  }
